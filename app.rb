@@ -31,7 +31,9 @@ module OauthProfillServer
     end
 
     use Oauth
+    use OauthProfillServer::Routes::Accounts
     use OauthProfillServer::Routes::Applications
+    use OauthProfillServer::Routes::Authorizations
   end
 end
 
