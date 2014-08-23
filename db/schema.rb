@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823131621) do
+ActiveRecord::Schema.define(version: 20140823164514) do
 
   create_table "access_tokens", force: true do |t|
     t.integer  "account_id"
-    t.integer  "application_id"
+    t.integer  "client_id"
     t.string   "token"
     t.string   "secret"
     t.datetime "expires_at"
@@ -30,23 +30,23 @@ ActiveRecord::Schema.define(version: 20140823131621) do
     t.datetime "updated_at"
   end
 
-  create_table "applications", force: true do |t|
+  create_table "authorization_codes", force: true do |t|
+    t.integer  "account_id"
+    t.integer  "client_id"
+    t.string   "token"
+    t.string   "redirect_uri"
+    t.datetime "expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "clients", force: true do |t|
     t.integer  "account_id"
     t.string   "identifier"
     t.string   "secret"
     t.string   "name"
     t.string   "website"
     t.string   "redirect_uri"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "authorization_codes", force: true do |t|
-    t.integer  "account_id"
-    t.integer  "application_id"
-    t.string   "token"
-    t.string   "redirect_uri"
-    t.datetime "expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
