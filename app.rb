@@ -9,8 +9,8 @@ $: << File.expand_path('../lib', __FILE__)
 require 'dotenv'
 Dotenv.load
 
-# Require base
 require 'sinatra/base'
+require "sinatra/activerecord"
 
 libraries = Dir[File.expand_path('../lib/**/*.rb', __FILE__)]
 libraries.each do |path_name|
@@ -22,6 +22,11 @@ require 'app/routes'
 
 module OauthProfillServer
   class App < Sinatra::Application
+    register Sinatra::ActiveRecordExtension
+
+    configure do
+      set :database, {adapter: "sqlite3", database: "oauthdb.sqlite3"}
+    end
   end
 end
 
