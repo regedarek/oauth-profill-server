@@ -11,7 +11,6 @@ Dotenv.load
 
 require 'sinatra/base'
 require 'sinatra/activerecord'
-require 'active_model'
 require 'pry-byebug'
 
 require 'app/models'
