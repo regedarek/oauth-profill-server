@@ -27,6 +27,8 @@ module OauthProfillServer
     configure do
       set :database, {adapter: "sqlite3", database: "oauthdb.sqlite3"}
     end
+
+    use OauthProfillServer::Routes::Applications
   end
 end
 
