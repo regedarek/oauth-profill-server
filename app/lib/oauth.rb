@@ -1,14 +1,4 @@
-class Oauth
-
-  def initialize(params)
-    @params = params
-  end
-
-  def valid?
-    true
-  end
-
-  def params
-    @params
-  end
+module Oauth
+  ROOT = File.expand_path(File.dirname(__FILE__) + '/..')
+  autoload :Authorization, ROOT + '/lib/oauth/authorization'
 end
