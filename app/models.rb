@@ -2,8 +2,8 @@ module OauthProfillServer
   module Models
     autoload :AccessToken, 'app/models/access_token'
     autoload :Account, 'app/models/account'
-    autoload :AuthorizationToken, 'app/models/authorization_token'
     autoload :Client, 'app/models/client'
+    autoload :AuthorizationCode, 'app/models/authorization_code'
     # Example:
     # autoload :Post, 'app/models/post'
   end

@@ -1,6 +1,6 @@
 module OauthProfillServer
   module Models
-    class AuthorizationToken < ActiveRecord::Base
+    class AuthorizationCode < ActiveRecord::Base
 
     end
   end
