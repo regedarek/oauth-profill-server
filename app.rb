@@ -16,7 +16,6 @@ require 'pry-byebug'
 
 require 'app/models'
 require 'app/routes'
-require 'app/lib/oauth'
 
 module OauthProfillServer
   class App < Sinatra::Application
