@@ -14,6 +14,7 @@ require "sinatra/activerecord"
 
 require 'app/models'
 require 'app/routes'
+require 'app/lib/oauth'
 
 module OauthProfillServer
   class App < Sinatra::Application
@@ -23,6 +24,7 @@ module OauthProfillServer
       set :database, {adapter: "sqlite3", database: "oauthdb.sqlite3"}
     end
 
+    use Oauth
     use OauthProfillServer::Routes::Applications
   end
 end
