@@ -10,7 +10,9 @@ require 'dotenv'
 Dotenv.load
 
 require 'sinatra/base'
-require "sinatra/activerecord"
+require 'sinatra/activerecord'
+require 'active_model'
+require 'pry-byebug'
 
 require 'app/models'
 require 'app/routes'
@@ -30,7 +32,6 @@ module OauthProfillServer
           :secret       => ENV['SESSION_SECRET']
     end
 
-    use Oauth
     use OauthProfillServer::Routes::Accounts
     use OauthProfillServer::Routes::Authorizations
     use OauthProfillServer::Routes::Clients

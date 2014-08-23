@@ -80,6 +80,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemodel
   dotenv
   pry
   pry-byebug

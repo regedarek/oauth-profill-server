@@ -4,6 +4,7 @@ ruby '2.1.2'
 gem 'sinatra', require: 'sinatra/base'
 gem 'dotenv' # environment variables
 gem 'rake', '~> 10.3'
+gem 'activemodel'
 
 # DB
 gem 'sinatra-activerecord'
