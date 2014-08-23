@@ -12,11 +12,6 @@ Dotenv.load
 require 'sinatra/base'
 require "sinatra/activerecord"
 
-libraries = Dir[File.expand_path('../lib/**/*.rb', __FILE__)]
-libraries.each do |path_name|
-  require path_name
-end
-
 require 'app/models'
 require 'app/routes'
 
