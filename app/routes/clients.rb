@@ -3,7 +3,7 @@ module OauthProfillServer
     class Clients < Base
       get '/v1/clients' do
         content_type :json
-        OauthProfillServer::Models::Client.all.to_json
+        Songkick::OAuth2::Model::Client.all.to_json
       end
     end
   end
