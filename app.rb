@@ -22,6 +22,12 @@ module OauthProfillServer
 
     configure do
       set :database, {adapter: "sqlite3", database: "oauthdb.sqlite3"}
+
+      set :sessions,
+          :httponly     => true,
+          :secure       => false,
+          :expire_after => 5.years,
+          :secret       => ENV['SESSION_SECRET']
     end
 
     use Oauth
