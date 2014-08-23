@@ -1,7 +1,7 @@
 <h3>Sign in</h3>
 
 <form method="post" action="/v1/sign_in">
-  <% @oauth.params.each do |key, value| %>
+  <% @oauth2.params.each do |key, value| %>
     <input type="hidden" name="<%= key %>" value="<%= value %>">
   <% end %>
 

@@ -1,7 +1,7 @@
 <h3>Authorize OAuth client</h3>
 
 <form method="post" action="/v1/allow">
-  <% @oauth.params.each do |key, value| %>
+  <% @oauth2.params.each do |key, value| %>
     <input type="hidden" name="<%= key %>" value="<%= value %>">
   <% end %>
   <input type="hidden" name="account_id" value="<%= @account.id %>">
