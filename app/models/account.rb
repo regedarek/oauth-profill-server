@@ -1,4 +1,4 @@
-module OauthProfillServer
+module Oauth2Provider
   module Models
     class Account < ActiveRecord::Base
       include Songkick::OAuth2::Model::ResourceOwner

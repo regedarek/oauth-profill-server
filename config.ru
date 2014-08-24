@@ -1,3 +1,3 @@
 require './app'
 
-run OauthProfillServer::App
+run Oauth2Provider::App

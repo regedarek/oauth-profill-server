@@ -1,4 +1,4 @@
-module OauthProfillServer
+module Oauth2Provider
   module Routes
     autoload :Base,     'app/routes/base'
     autoload :Accounts, 'app/routes/accounts'

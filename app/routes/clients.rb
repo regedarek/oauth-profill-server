@@ -1,4 +1,4 @@
-module OauthProfillServer
+module Oauth2Provider
   module Routes
     class Clients < Base
       get '/clients' do

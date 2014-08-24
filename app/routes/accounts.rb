@@ -1,9 +1,9 @@
-module OauthProfillServer
+module Oauth2Provider
   module Routes
     class Accounts < Base
       get '/accounts' do
         content_type :json
-        OauthProfillServer::Models::Account.all.to_json
+        Oauth2Provider::Models::Account.all.to_json
       end
     end
   end

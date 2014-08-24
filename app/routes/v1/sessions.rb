@@ -1,4 +1,4 @@
-module OauthProfillServer
+module Oauth2Provider
   module Routes
     module V1
       class Sessions < Base
