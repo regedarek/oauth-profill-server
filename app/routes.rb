@@ -1,11 +1,11 @@
 module OauthProfillServer
   module Routes
-    autoload :Base, 'app/routes/base'
+    autoload :Base,     'app/routes/base'
     autoload :Accounts, 'app/routes/accounts'
-    autoload :Clients, 'app/routes/clients'
-    autoload :Authorizations, 'app/routes/authorizations'
-
-    # Example route loading:
-    # autoload :Posts, 'app/routes/posts'
+    autoload :Clients,  'app/routes/clients'
+    module V1
+      autoload :Authorizations, 'app/routes/v1/authorizations'
+      autoload :Sessions,       'app/routes/v1/sessions'
+    end
   end
 end
