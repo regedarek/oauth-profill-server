@@ -1,4 +1,4 @@
-oauth-profill-server
+oauth2-provider
 ====================
 
 ## Development bootstrap
