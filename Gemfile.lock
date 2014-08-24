@@ -65,6 +65,8 @@ GEM
       byebug (~> 2.7)
       pry (~> 0.10)
     rack (1.5.2)
+    rack-api-versioning (0.0.1)
+      rack (>= 1.0)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.2)
@@ -121,6 +123,7 @@ DEPENDENCIES
   oauth2
   protected_attributes
   pry-byebug
+  rack-api-versioning
   rake (~> 10.3)
   rerun
   sinatra
