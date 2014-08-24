@@ -27,13 +27,15 @@ module Oauth2Provider
       }
 
       set :sessions,
-          :httponly     => true,
-          :secure       => false,
-          :expire_after => 5.years,
-          :secret       => ENV['SESSION_SECRET']
+          httponly: true,
+          secure: false,
+          expire_after: 5.years,
+          secret: ENV['SESSION_SECRET']
     end
 
-    use Oauth2Provider::Routes::Accounts
+    use Oauth2Provider::Routes::V1::Accounts
+    use Oauth2Provider::Routes::V2::Accounts
+    use Oauth2Provider::Routes::V3::Accounts
     use Oauth2Provider::Routes::Clients
     use Oauth2Provider::Routes::V1::Authorizations
     use Oauth2Provider::Routes::V1::Sessions
