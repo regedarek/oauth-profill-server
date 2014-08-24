@@ -23,6 +23,8 @@ GEM
     byebug (2.7.0)
       columnize (~> 0.3)
       debugger-linecache (~> 1.2)
+    celluloid (0.16.0.pre3)
+      timers (~> 4.0.0)
     coderay (1.1.0)
     columnize (0.8.9)
     daemons (1.1.9)
@@ -33,9 +35,15 @@ GEM
     eventmachine (1.0.3)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    ffi (1.9.3)
+    hitimes (1.2.2)
     i18n (0.6.11)
     json (1.8.1)
     jwt (1.0.0)
+    listen (2.7.9)
+      celluloid (>= 0.15.2)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
     method_source (0.8.2)
     minitest (5.4.0)
     multi_json (1.10.1)
@@ -62,6 +70,11 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.3.2)
+    rb-fsevent (0.9.4)
+    rb-inotify (0.9.5)
+      ffi (>= 0.5.0)
+    rerun (0.10.0)
+      listen (~> 2.7, >= 2.7.3)
     ripl (0.7.1)
       bond (~> 0.5.1)
     ripl-multi_line (0.3.1)
@@ -90,6 +103,8 @@ GEM
       rack (>= 1.0.0)
     thread_safe (0.3.4)
     tilt (1.4.1)
+    timers (4.0.0)
+      hitimes
     tux (0.3.0)
       ripl (>= 0.3.5)
       ripl-multi_line (>= 0.2.4)
@@ -105,9 +120,9 @@ DEPENDENCIES
   dotenv
   oauth2
   protected_attributes
-  pry
   pry-byebug
   rake (~> 10.3)
+  rerun
   sinatra
   sinatra-activerecord
   songkick-oauth2-provider
