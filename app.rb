@@ -21,7 +21,10 @@ module OauthProfillServer
     register Sinatra::ActiveRecordExtension
 
     configure do
-      set :database, {adapter: "sqlite3", database: "oauthdb.sqlite3"}
+      set :database, {
+        adapter: "sqlite3",
+        database: "db/oauthdb.sqlite3"
+      }
 
       set :sessions,
           :httponly     => true,
