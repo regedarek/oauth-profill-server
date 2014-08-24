@@ -1,6 +1,6 @@
 module Oauth2Provider
   module Routes
-    class Base < Sinatra::Application
+    class Base < Sinatra::Base
       configure do
         set :root, App.root
         set :views, 'app/views'

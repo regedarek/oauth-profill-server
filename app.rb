@@ -18,8 +18,6 @@ require 'app/routes'
 
 module Oauth2Provider
   class App < Sinatra::Application
-    register Sinatra::ActiveRecordExtension
-
     configure do
       set :database, {
         adapter: "sqlite3",
@@ -33,9 +31,6 @@ module Oauth2Provider
           secret: ENV['SESSION_SECRET']
     end
 
-    use Oauth2Provider::Routes::V1::Accounts
-    use Oauth2Provider::Routes::V2::Accounts
-    use Oauth2Provider::Routes::V3::Accounts
     use Oauth2Provider::Routes::Clients
     use Oauth2Provider::Routes::V1::Authorizations
     use Oauth2Provider::Routes::V1::Sessions

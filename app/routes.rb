@@ -11,8 +11,5 @@ module Oauth2Provider
     module V2
       autoload :Accounts, 'app/routes/v2/accounts'
     end
-    module V3
-      autoload :Accounts, 'app/routes/v3/accounts'
-    end
   end
 end
